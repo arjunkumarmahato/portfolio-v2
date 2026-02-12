@@ -4,9 +4,9 @@ import styles from "./certifications.module.scss";
 export default function Certifications() {
     return (
         <section className={styles.certifications}>
-            <div className={styles.num}>05</div>
+            <div className={styles.num}>03</div>
             <div className={styles.container}>
-                <h2><span>05</span>Certifications</h2>
+                <h2><span>03</span>Certifications</h2>
                 <div className={styles.item}>
                     <img src="/images/certifications/deeplearningai.jpg" alt="DeepLearning.AI Logo" />
                     <div>

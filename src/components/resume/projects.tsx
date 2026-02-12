@@ -5,9 +5,9 @@ import styles from "./projects.module.scss";
 export default function Projects() {
     return (
         <section className={styles.projects}>
-            <div className={styles.num}>02</div>
+            <div className={styles.num}>04</div>
             <div className={styles.container}>
-                <h2><span>02</span>Projects</h2>
+                <h2><span>04</span>Projects</h2>
                 <div className={styles.item}>
                     <div>
                         <h3>Relay <span>: Real-time Chat Platform</span></h3>

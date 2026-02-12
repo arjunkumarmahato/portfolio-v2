@@ -3,9 +3,9 @@ import styles from "./skills.module.scss";
 export default function Skills() {
     return (
         <section className={styles.skills}>
-            <div className={styles.num}>03</div>
+            <div className={styles.num}>06</div>
             <div className={styles.container}>
-                <h2><span>03</span>Skills</h2>
+                <h2><span>06</span>Skills</h2>
                 <div>
                     <div>
                         <div>

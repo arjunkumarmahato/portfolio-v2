@@ -14,11 +14,11 @@ export default function ResumePage() {
         <div className={styles.resume}>
             <ResumeHeader />
             <Experience />
-            <Projects />
-            <Skills />
             <Education />
             <Certifications />
+            <Projects />
             <Achievements />
+            <Skills />
         </div>
     );
 }
