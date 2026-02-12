@@ -3,9 +3,9 @@ import styles from "./skills.module.scss";
 export default function Skills() {
     return (
         <section className={styles.skills}>
-            <div className={styles.num}>06</div>
+            <div className={styles.num}>03</div>
             <div className={styles.container}>
-                <h2><span>06</span>Skills</h2>
+                <h2><span>03</span>Skills</h2>
                 <div>
                     <div>
                         <div>
@@ -39,6 +39,13 @@ export default function Skills() {
                                 <li>Matplotlib</li>
                                 <li>Seaborn</li>
                                 <li>Scikit-Learn</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Data Analysis</h3>
+                            <ul>
+                                <li>MS Excel</li>
+                                <li>Power BI</li>
                             </ul>
                         </div>
                         <div>

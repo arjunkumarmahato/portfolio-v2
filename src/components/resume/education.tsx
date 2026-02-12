@@ -3,9 +3,9 @@ import styles from "./education.module.scss";
 export default function Education() {
     return (
         <section className={styles.education}>
-            <div className={styles.num}>02</div>
+            <div className={styles.num}>04</div>
             <div className={styles.container}>
-                <h2><span>02</span>Education</h2>
+                <h2><span>04</span>Education</h2>
                 <div className={styles.item}>
                     <img src="/images/education/iitism.png" alt="IIT (ISM) Dhanbad Logo" />
                     <div>
