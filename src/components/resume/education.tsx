@@ -10,11 +10,11 @@ export default function Education() {
                     <img src="/images/education/iitism.png" alt="IIT (ISM) Dhanbad Logo" />
                     <div>
                         <div>
-                            <h3><span>IIT (ISM) Dhanbad</span></h3>
+                            <h3>IIT (ISM) Dhanbad</h3>
                             <div>Dhanbad, Jharkhand, India</div>
                         </div>
                         <div>
-                            <div>B.Tech in Mechanical Engineering (CGPA : 7.30/10.00)</div>
+                            <div>B.Tech in Mechanical Engineering <br />(CGPA : 7.30/10.00)</div>
                             <div>November 2021 - May 2025</div>
                         </div>
                     </div>
@@ -23,11 +23,11 @@ export default function Education() {
                     <img src="/images/education/jnv.jpg" alt="JNV Logo" />
                     <div>
                         <div>
-                            <h3><span>JNV Bangalore Urban</span></h3>
+                            <h3>JNV Bangalore Urban</h3>
                             <div>Bangalore, Karnataka, India</div>
                         </div>
                         <div>
-                            <div>Intermediate in Science (Percentage : 92.6%)</div>
+                            <div>Intermediate in Science <br />(Percentage : 92.6%)</div>
                             <div>June 2018 - April 2020</div>
                         </div>
                     </div>
