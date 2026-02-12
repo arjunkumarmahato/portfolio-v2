@@ -1,0 +1,78 @@
+.achievements {
+    margin-top: 24px;
+
+    .num {
+        display: none;
+        line-height: 0.75;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        h2 {
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            line-height: 1;
+            display: flex;
+            gap: 24px;
+
+            span {
+                font-size: 0.95rem;
+                font-weight: 400;
+                opacity: 0.2;
+            }
+        }
+
+        ul {
+            margin-left: 16px;
+            margin-bottom: 8px;
+
+            a {
+                text-transform: none;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        .num {
+            display: block;
+            font-size: 8rem;
+            opacity: 0.1;
+        }
+
+        .container {
+            width: 100%;
+
+            h2 {
+                font-size: 1.5rem;
+
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .num {
+            font-size: 12rem;
+        }
+
+        .container {
+            h2 {
+                font-size: 2rem;
+            }
+
+            ul {
+                max-width: 45vw;
+            }
+        }
+    }
+}

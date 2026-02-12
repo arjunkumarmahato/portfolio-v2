@@ -1,0 +1,53 @@
+@use "../styles/mixins" as m;
+
+.menuBtn {
+    background-color: var(--color-bg-glass);
+    border-radius: 2px;
+    display: flex;
+
+    .menuIcon {
+        cursor: pointer;
+        width: 44px;
+        // background-color: var(--bg-glass);
+        border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        // @include m.background-slide();
+
+        span {
+            position: relative;
+            width: 24px;
+            height: 1px;
+            background-color: var(--color-text-primary);
+            transition: transform 0.3s ease;
+        }
+
+    }
+
+    .menuText {
+        // width: 80px;
+        padding: var(--pd-sm) 0;
+        // background-color: var(--bg-glass);
+        border-radius: 2rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+    }
+
+    &.open {
+        span {
+            &:first-child {
+                transform: translateY(3px) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                transform: translateY(-3px) rotate(-45deg);
+            }
+        }
+    }
+}

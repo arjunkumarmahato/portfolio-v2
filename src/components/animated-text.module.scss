@@ -1,0 +1,26 @@
+.animatedText {
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+
+    >div {
+        transition: all 0.3s ease;
+    }
+
+    >div:last-of-type {
+        position: absolute;
+        top: 0;
+        transform: translateY(1.75rem) rotate(5deg);
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        >div:first-of-type {
+            transform: translateY(-1.75rem) rotate(-5deg);
+        }
+
+        >div:last-of-type {
+            transform: translateY(0) rotate(0);
+        }
+    }
+}

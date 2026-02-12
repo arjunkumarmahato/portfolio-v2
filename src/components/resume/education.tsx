@@ -1,0 +1,38 @@
+import styles from "./education.module.scss";
+
+export default function Education() {
+    return (
+        <section className={styles.education}>
+            <div className={styles.num}>02</div>
+            <div className={styles.container}>
+                <h2><span>02</span>Education</h2>
+                <div className={styles.item}>
+                    <img src="/images/education/iitism.png" alt="IIT (ISM) Dhanbad Logo" />
+                    <div>
+                        <div>
+                            <h3><span>IIT (ISM) Dhanbad</span></h3>
+                            <div>Dhanbad, Jharkhand, India</div>
+                        </div>
+                        <div>
+                            <div>B.Tech in Mechanical Engineering (CGPA : 7.30/10.00)</div>
+                            <div>November 2021 - May 2025</div>
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.item}>
+                    <img src="/images/education/jnv.jpg" alt="JNV Logo" />
+                    <div>
+                        <div>
+                            <h3><span>JNV Bangalore Urban</span></h3>
+                            <div>Bangalore, Karnataka, India</div>
+                        </div>
+                        <div>
+                            <div>Intermediate in Science (Percentage : 92.6%)</div>
+                            <div>June 2018 - April 2020</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}

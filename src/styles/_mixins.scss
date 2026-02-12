@@ -1,0 +1,28 @@
+// _mixins.scss
+@mixin background-slide($color: var(--bg-glass)) {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color;
+        z-index: -1;
+        border-radius: 100%;
+
+        transform: translateY(100%);
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    &:hover {
+        &::after {
+            border-radius: 0;
+            transform: translateY(0);
+        }
+    }
+}

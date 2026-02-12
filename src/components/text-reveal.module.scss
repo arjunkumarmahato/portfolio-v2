@@ -1,0 +1,70 @@
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+}
+
+.copyContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.animeText {
+    width: 100%;
+
+    .textContainer {
+        color: var(--color-text-primary);
+        text-align: center;
+    }
+}
+
+.word {
+    display: inline-block;
+    position: relative;
+    margin-right: 0.1em;
+    margin-bottom: 0.2rem;
+    padding: 0.1em 0.25em;
+    border-radius: 2em;
+    will-change: background-color, opacity;
+    opacity: 0;
+    font-size: 12.5vw;
+
+    &.keywordWrapper {
+        margin: 0 0.4rem 0.2rem 0.2rem;
+    }
+
+    span {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        font-family: "Lock Serif Light";
+
+        &.keyword {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border-radius: 2rem;
+            padding: 0.1rem 0.2rem;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: calc(100% + 1rem);
+                height: calc(100% + 0.4rem);
+                background-color: #fff;
+                border-radius: 2rem;
+                z-index: -1;
+            }
+        }
+    }
+
+    @media screen and (min-width: 720px) {
+        font-size: 8vw;
+    }
+}

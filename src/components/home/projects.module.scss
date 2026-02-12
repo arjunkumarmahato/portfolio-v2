@@ -1,0 +1,228 @@
+.projects {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-bg-primary);
+    padding-bottom: 0;
+    z-index: 1;
+}
+
+.projectSection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.projectContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    // background-color: var(--color-bg-primary); // Removed default bg
+    color: var(--color-text-primary);
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border: none; // Removed border
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
+}
+
+.projectContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem 5rem;
+    position: relative;
+    z-index: 2;
+    background-color: transparent; // Transparent to show container accent
+
+    @media (max-width: 768px) {
+        padding: 2rem;
+        flex: 0 0 auto;
+    }
+}
+
+.index {
+    font-family: "Neue Montreal Regular", sans-serif;
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 0.8;
+    opacity: 0.1;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    user-select: none;
+    pointer-events: none;
+    color: var(--color-text-primary);
+}
+
+.details {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h2 {
+        font-family: "Lock Serif Light", serif;
+        font-size: 5rem;
+        font-weight: 400;
+        line-height: 0.9;
+        margin: 0;
+        text-transform: uppercase;
+        color: var(--color-text-primary);
+
+        @media (max-width: 1400px) {
+            font-size: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 3rem;
+        }
+    }
+
+    .tags {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        font-family: "Neue Montreal Regular", sans-serif;
+        font-size: 1.125rem;
+        text-transform: uppercase;
+        opacity: 0.6;
+        color: var(--color-text-primary);
+
+        .separator {
+            opacity: 0.5;
+        }
+    }
+}
+
+.description {
+    font-family: "Neue Montreal Regular", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 500px;
+    opacity: 0.8;
+    color: var(--color-text-primary);
+}
+
+.actions {
+    margin-top: 1rem;
+
+    .link {
+        display: inline-block;
+        font-family: "Neue Montreal Regular", sans-serif;
+        font-size: 1.125rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--color-bg-primary);
+        background-color: var(--color-text-primary);
+        padding: 1.25rem 2.5rem;
+        border-radius: 0;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        border: 1px solid transparent;
+
+        &:hover {
+            background-color: transparent;
+            color: var(--color-text-primary);
+            border-color: var(--color-text-primary);
+            transform: translateY(-2px);
+        }
+    }
+}
+
+.projectImageWrapper {
+    flex: 1.2;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    height: 100%;
+    padding: 1.5rem; // Add padding around image
+
+    @media (max-width: 1024px) {
+        flex: 1.5;
+        min-height: 40vh;
+        padding: 1rem;
+    }
+}
+
+.projectImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px; // Add border radius to image container
+    overflow: hidden; // Ensure image conforms to radius
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+        filter: grayscale(0%);
+    }
+}
+
+.projectContainer:hover {
+    .projectImage img {
+        transform: scale(1.03);
+    }
+}
+
+.viewAllParams {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg-primary);
+    z-index: 1;
+
+    .viewAllBtn {
+        font-family: "Neue Montreal Regular", sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        padding: 1.5rem 3rem;
+        border: 1px solid var(--color-text-primary);
+        border-radius: 0;
+        color: var(--color-text-primary);
+        text-decoration: none;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        background: transparent;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            background-color: var(--color-text-primary);
+            color: var(--color-bg-primary);
+        }
+    }
+}
+
+/* Accents */
+.accent1 {
+    background-color: var(--color-accent-pastel-violet);
+}
+
+.accent2 {
+    background-color: var(--color-accent-pastel-pink);
+}
+
+.accent3 {
+    background-color: var(--color-accent-pastel-orange);
+}

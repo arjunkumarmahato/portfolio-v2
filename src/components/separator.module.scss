@@ -1,0 +1,21 @@
+.separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    transform: translateY(32px);
+    background-color: var(--bg-inverse);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    >div {
+        background-color: var(--bg-glass-secondary);
+        width: 36px;
+        height: 1px;
+    }
+}

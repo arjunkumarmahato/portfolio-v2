@@ -1,0 +1,212 @@
+.skills {
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    overflow: hidden;
+    background-color: transparent;
+
+    @media (max-width: 768px) {
+        height: auto;
+        min-height: 65vh;
+        overflow: visible;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.skillsHeader {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transform: translateY(400%);
+    will-change: transform;
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--color-text-primary);
+    }
+}
+
+/* --- Main Cards Container (Fixed) --- */
+.cards {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3rem;
+        padding: 2rem 0;
+        overflow: visible; // Allow scrolling
+    }
+}
+
+.cardsContainer {
+    position: relative;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    @media (max-width: 768px) {
+        width: 100%; // Use full width
+        gap: 2rem;
+        flex-direction: row; // Horizontal layout
+        justify-content: flex-start; // Start from left
+        align-items: center;
+        padding-left: 10vw; // Offset first card slightly
+        flex-direction: column; // Back to vertical
+        padding-left: 0;
+        gap: 3rem;
+    }
+}
+
+.mainCard {
+    flex: 1;
+    position: relative;
+    aspect-ratio: 5/7;
+    perspective: 1000px;
+    opacity: 0;
+    /* Handled by JS */
+
+    @media (max-width: 768px) {
+        width: 75vw; // Responsive width retaining aspect ratio
+        height: auto;
+        aspect-ratio: 5/7; // Tall cards as requested
+        opacity: 1; // Default visible for horizontal scroll (GSAP can play with it)
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin: 0;
+    }
+}
+
+.cardWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    animation: floating 2s infinite ease-in-out;
+}
+
+/* --- Floating Animation --- */
+@keyframes floating {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        transform: translate(-50%, -55%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* --- Flip Card Internals --- */
+.flipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.flipCardFront,
+.flipCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.flipCardFront {
+    padding: 0;
+    display: block;
+    // content handled by HeroCard
+}
+
+.flipCardBack {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: #ffffff; // Fixed: Explicit white background for Skills card back
+    transform: rotateY(180deg);
+
+    .cardTitle {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: var(--color-text-primary);
+        }
+
+        img {
+            height: 12px;
+            aspect-ratio: 1/1;
+        }
+    }
+}
+
+.cardCopy {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    p {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        background-color: var(--color-bg-secondary); // replaced $light2
+        border-radius: 0.25rem;
+        color: var(--color-text-primary);
+        font-weight: 500;
+    }
+}
+
+/* Accent Colors */
+.accent1 {
+    background-color: var(--color-accent-pastel-violet);
+}
+
+.accent2 {
+    background-color: var(--color-accent-pastel-pink);
+}
+
+.accent3 {
+    background-color: var(--color-accent-pastel-orange);
+}

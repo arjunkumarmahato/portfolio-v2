@@ -1,0 +1,26 @@
+.themeToggle {
+    background-color: var(--color-bg-glass);
+    border-radius: 2rem;
+    padding: 4px;
+    display: flex;
+    gap: 4px;
+
+    >div {
+        height: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        padding: 8px;
+        transition: all 0.3s ease;
+
+        svg {
+            height: 100%;
+            aspect-ratio: 1/1;
+            color: var(--color-text-primary);
+            fill: var(--color-text-primary);
+        }
+
+        &.active {
+            background-color: var(--color-bg-glass);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.contactBtn {
+    padding: 4px;
+    border-radius: 6px;
+    display: flex;
+    gap: 4px;
+
+    >div:first-of-type {
+        padding: var(--pd-sm) var(--pd-md);
+        background-color: var(--color-bg-tertiary);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        text-transform: uppercase;
+        color: var(--color-text-tertiary);
+        font-size: 0.95rem;
+    }
+
+    >div:last-of-type {
+        padding: var(--pd-sm) var(--pd-md);
+        background-color: var(--color-bg-tertiary);
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 16px;
+            aspect-ratio: 1/1;
+            transform: translateY(-1px);
+            filter: invert(1);
+        }
+    }
+}

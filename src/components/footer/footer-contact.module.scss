@@ -1,0 +1,17 @@
+.footerContact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h3 {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.2;
+    }
+
+    div {
+        font-family: "Lock Serif Light";
+        font-size: 3rem;
+    }
+}

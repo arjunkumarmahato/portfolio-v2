@@ -1,0 +1,25 @@
+.navLink {
+    padding: var(--pd-sm) var(--pd-md);
+    background-color: var(--color-bg-glass);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    border-radius: 4px;
+    color: var(--color-text-primary);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+
+
+    img {
+        height: 16px;
+        aspect-ratio: 1/1;
+        transform: translateY(-1px);
+    }
+
+    &:hover,
+    &.active {
+        border-radius: 2rem;
+    }
+}

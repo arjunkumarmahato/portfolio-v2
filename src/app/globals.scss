@@ -1,0 +1,173 @@
+:root {
+  // --color-bg-primary: #0c0c00;
+  // --color-bg-secondary: #2c2c2c;
+  // --color-bg-tertiary: #f2f1ed;
+  // --color-bg-glass: rgba(255, 255, 255, 0.1);
+  // --color-bg-glass-dark: rgba(0, 0, 0, 0.1);
+
+  --color-bg-primary: #f9f4eb;
+  --color-bg-secondary: #f9edd6;
+  --color-bg-tertiary: #00080c;
+  --color-bg-glass: rgba(0, 0, 0, 0.075);
+
+  --color-accent-gold: #fcdca6;
+  --color-accent-lime: #b6ff00;
+  --color-accent-violet: #7d39eb;
+
+  --color-accent-pastel-violet: #e5d9f6;
+  --color-accent-pastel-pink: #ffd2f3;
+  --color-accent-pastel-orange: #fcdca6;
+
+  --color-text-primary: #00080c;
+  --color-text-secondary: #2c2c2c;
+  --color-text-tertiary: #f9f4eb;
+  --color-text-glass: rgba(0, 0, 0, 0.1);
+
+  --pd-sm: 0.6rem;
+  --pd-md: 0.75rem;
+  --pd-lg: 1.25rem;
+
+  --box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ... fonts unchanged ... */
+
+@font-face {
+  font-family: "Fragment Mono Regular";
+  src: url("/fonts/fragment-mono-regular.woff2");
+}
+
+@font-face {
+  font-family: "Eiko Regular Italic";
+  src: url("/fonts/eiko-regular-italic.woff2");
+}
+
+@font-face {
+  font-family: "Neue Montreal Regular";
+  src: url("/fonts/neue-montreal-regular.woff2");
+}
+
+@font-face {
+  font-family: "Neue Montreal Light";
+  src: url("/fonts/neue-montreal-light.woff2");
+}
+
+@font-face {
+  font-family: "Lock Serif Light";
+  src: url("/fonts/lock-serif-light.ttf");
+}
+
+@font-face {
+  font-family: "Simula";
+  src: url("/fonts/simula.ttf");
+}
+
+@font-face {
+  font-family: "Aeonik Regular";
+  src: url("/fonts/aeonik-regular.woff2");
+}
+
+@font-face {
+  font-family: "Aeonik Medium";
+  src: url("/fonts/aeonik-medium.woff2");
+}
+
+@font-face {
+  font-family: "Aeonik Mono Regular";
+  src: url("/fonts/aeonik-mono-regular.woff2");
+}
+
+@font-face {
+  font-family: "Amiga Mono Regular";
+  src: url("/fonts/amiga-mono-regular.woff");
+}
+
+@font-face {
+  font-family: "Gridular Regular";
+  src: url("/fonts/gridular-regular.woff2");
+}
+
+@font-face {
+  font-family: "IBF";
+  src: url("/fonts/ibf.woff2");
+}
+
+@font-face {
+  font-family: "Romie Regular";
+  src: url("/fonts/romie-regular.woff2");
+}
+
+@font-face {
+  font-family: "Roboto Mono Regular";
+  src: url("/fonts/roboto-mono-regular.ttf");
+}
+
+@font-face {
+  font-family: "Monoska";
+  src: url("/fonts/monoska.woff2");
+}
+
+@font-face {
+  font-family: "Spezia Mono Medium";
+  src: url("/fonts/spezia-mono-medium.woff2");
+}
+
+@font-face {
+  font-family: "Spezia Narrow Semibold";
+  src: url("/fonts/spezia-narrow-semibold.woff2");
+}
+
+@font-face {
+  font-family: "Spezia Normal Medium";
+  src: url("/fonts/spezia-normal-medium.woff2");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Neue Montreal Regular", Helvetica, sans-serif;
+}
+
+html,
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  font-size: 16px;
+
+  /* Custom Scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-bg-glass) transparent;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-bg-glass);
+    border-radius: 20px;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+button {
+  background: transparent;
+  border: none;
+}

@@ -1,0 +1,284 @@
+.contact {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 40px 40px;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    display: flex;
+    justify-content: center;
+
+    .gridContainer {
+        width: 100%;
+        max-width: 1400px;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid var(--color-text-glass);
+    }
+
+    /* --- Header Section --- */
+    .headerSection {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        border-bottom: 1px solid var(--color-text-glass);
+
+        .titleWrapper {
+            padding: 60px 0;
+            border-right: 1px solid var(--color-text-glass);
+
+            h1 {
+                font-family: "Lock Serif Light", serif;
+                font-size: 11vw;
+                line-height: 0.8;
+                text-transform: uppercase;
+                font-weight: 400;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+
+        .profileWrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+
+            .imageContainer {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                overflow: hidden;
+                filter: grayscale(1); // Stylistic choice
+                transition: filter 0.5s ease;
+
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+
+            .profileImage {
+                object-fit: cover;
+            }
+        }
+    }
+
+    /* --- Info Bar --- */
+    .infoBar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; // Flexible grid
+        border-bottom: 1px solid var(--color-text-glass);
+
+        .infoItem {
+            padding: 20px;
+            border-right: 1px solid var(--color-text-glass);
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .label {
+                font-family: "Neue Montreal Regular";
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                color: var(--color-text-secondary);
+                letter-spacing: 0.05em;
+            }
+
+            .value {
+                font-family: "Neue Montreal Regular";
+                font-size: 1rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    /* --- Contact Section --- */
+    .contactSection {
+        padding: 80px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-bottom: 1px solid var(--color-text-glass);
+
+        .emailWrapper {
+            overflow: hidden;
+        }
+
+        .email {
+            font-family: "Neue Montreal Regular";
+            font-size: 8vw;
+            line-height: 1;
+            text-decoration: none;
+            color: var(--color-text-primary);
+            word-break: break-all; // Ensure it wraps on mobile if insanely long
+            letter-spacing: -0.02em;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: var(--color-text-secondary);
+            }
+        }
+
+        .phoneWrapper {
+            .phone {
+                font-family: "Neue Montreal Regular";
+                font-size: 2rem;
+                text-decoration: none;
+                color: var(--color-text-secondary);
+
+                &:hover {
+                    color: var(--color-text-primary);
+                }
+            }
+        }
+
+        .tagline {
+            margin-top: 40px;
+            font-family: "Neue Montreal Regular";
+            font-size: 1.25rem;
+            color: var(--color-text-primary);
+            text-transform: uppercase;
+            width: fit-content;
+            padding: 5px 15px;
+            border: 1px solid var(--color-text-primary);
+            border-radius: 50px;
+        }
+    }
+
+    /* --- Footer Section --- */
+    .footerSection {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+
+        .socialGrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-right: 1px solid var(--color-text-glass);
+
+            .socialItem {
+                padding: 30px;
+                border-right: 1px solid var(--color-text-glass);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 150px;
+                text-decoration: none;
+                color: var(--color-text-primary);
+                position: relative;
+                overflow: hidden;
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                .socialName {
+                    font-family: "Neue Montreal Regular";
+                    text-transform: uppercase;
+                    font-size: 0.9rem;
+                    letter-spacing: 0.05em;
+                }
+
+                .socialIcon {
+                    align-self: flex-end;
+                    transition: transform 0.3s ease;
+                }
+
+                &:hover {
+                    background-color: var(--color-text-primary);
+                    color: var(--color-bg-primary);
+
+                    .socialIcon {
+                        filter: invert(1);
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            padding: 30px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            font-family: "Neue Montreal Regular";
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--color-text-secondary);
+        }
+    }
+
+    /* --- Responsiveness --- */
+    @media (max-width: 1024px) {
+        .headerSection {
+            grid-template-columns: 1fr;
+
+            .titleWrapper {
+                border-right: none;
+                border-bottom: 1px solid var(--color-text-glass);
+                text-align: center;
+            }
+
+            .profileWrapper {
+                padding: 40px 0;
+            }
+        }
+
+        .infoBar {
+            grid-template-columns: 1fr 1fr;
+
+            .infoItem:nth-child(2) {
+                border-right: none; // Reset specific border if 2 items
+            }
+        }
+
+        .footerSection {
+            grid-template-columns: 1fr;
+
+            .socialGrid {
+                border-right: none;
+                border-bottom: 1px solid var(--color-text-glass);
+                grid-template-columns: 1fr 1fr; // 2x2 grid
+
+                .socialItem:nth-child(2n) {
+                    border-right: none;
+                }
+
+                .socialItem:nth-child(1),
+                .socialItem:nth-child(2) {
+                    border-bottom: 1px solid var(--color-text-glass);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 80px 20px 20px;
+
+        .contactSection {
+            .email {
+                font-size: 12vw;
+            }
+
+            .phone {
+                font-size: 1.5rem;
+            }
+        }
+
+        .footerSection .socialGrid {
+            grid-template-columns: 1fr; // Stack links
+
+            .socialItem {
+                border-right: none;
+                border-bottom: 1px solid var(--color-text-glass);
+                height: 80px;
+                flex-direction: row;
+                align-items: center;
+
+                .socialIcon {
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
